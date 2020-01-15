@@ -85,6 +85,13 @@
     copyToClipboard(document.getElementById("internal_widget_code"));
   });
 
+  $('#createEmailNewsletter').click(function() {
+    var $title = $('#email_widget_title').val();
+    var code = '{{< emailnewsletter text="'+$title+'" >}}';
+    $('#email_widget_code').val(code);
+    copyToClipboard(document.getElementById("email_widget_code"));
+  });
+
 
   // Collapse Navbar
   var navbarCollapse = function() {
